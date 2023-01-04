@@ -48,12 +48,12 @@ public class Circle {
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "idCourse=" + idCourse +
-                ", name='" + name + '\'' +
+        return "idCourse " + idCourse + " name='" + name + '\'' +
                 ", courses=" + Arrays.toString(courses) +
-                ", lecturers=" + Arrays.toString(lecturers) +
-                '}';
+                ", lecturers=" + Arrays.toString(lecturers);
+    }
+    public void printBasicData(){
+        System.out.println(idCourse + " " + name);
     }
 
     public void addCourse() {
@@ -61,8 +61,8 @@ public class Circle {
         String nameCourse;
         System.out.println("Enter The Name of Curse");
         nameCourse = scanner.nextLine();
-        Course course = new Course(nameCourse,null,null);
-        if(this.courses ==null) {
+        Course course = new Course(nameCourse, null, null);
+        if (this.courses == null) {
             this.courses = new Course[1];
             this.courses[1] = course;
         } else {
@@ -74,16 +74,17 @@ public class Circle {
             this.courses = newCourses;
         }
     }
+
     public void addLecturer() {
         Scanner scanner = new Scanner(System.in);
-        Lecturer lecturer=null;
+        Lecturer lecturer = null;
         System.out.println("Enter The First name of Lecturer");
         lecturer.setFirstName(scanner.nextLine());
         System.out.println("Enter The last name of Lecturer");
         lecturer.setLastName(scanner.nextLine());
         System.out.println("Enter The senurity of Lecturer");
         lecturer.setSenuirity(scanner.nextInt());
-        if(this.lecturers ==null) {
+        if (this.lecturers == null) {
             this.lecturers = new Lecturer[1];
             this.lecturers[1] = lecturer;
         } else {

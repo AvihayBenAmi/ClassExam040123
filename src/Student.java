@@ -13,8 +13,9 @@ public class Student extends Person {
     public void setStudentCardNumber(int studentCardNumber) {
         this.studentCardNumber = studentCardNumber;
     }
+
     @Override
     public String toString() {
-        return super.toString()+"studentCardNumber=" + studentCardNumber;
+        return super.toString() + "studentCardNumber=" + studentCardNumber;
     }
 }
